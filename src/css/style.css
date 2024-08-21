@@ -1,0 +1,198 @@
+@font-face{
+    font-family: 'megatron';
+    src: url(./fontes/Megatron\ Condensed\ Italic.otf);
+}
+
+body {
+    font-family: 'megatron';
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.cabecalho .logo {
+    width: 65px;
+    align-items: center;
+}
+.cabecalho .logo:hover{
+    transform: rotate(-7deg) scale(1.2);
+}
+
+.cabecalho .menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.cabecalho nav li a {
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+    padding: 10px 20px;
+    border-radius: 50% 10%;
+    transition: 0.2s;
+}
+
+.cabecalho nav li a:hover {
+    background-color: #f26223;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 132px);
+    padding: 0 30px 30px;
+}
+
+.container-about {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 132px);
+    padding: 0 30px 30px;
+    justify-content: flex-end;
+    text-align: center;
+    flex-direction: row-reverse;
+}
+
+
+.container .imagem-titulo {
+    max-width: 500px;
+}
+
+.container .descricao {
+    color: #a8adb7;
+    width: 100%;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.container .botao-trailer {
+    background-color: #f26223;
+    color: #000000;
+    padding: 10px;
+    font-family: 'megatron';
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10% 40%;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s all ease-in-out;
+}
+
+.container .botao-trailer:hover {
+    transform: rotate(-7deg) scale(1.2);
+}
+
+.container-about .assista {  
+    color: #f26223;
+    padding: 10px;
+    font-family: 'megatron';
+    font-size: 25px;
+    font-weight: bold;  
+    text-transform: uppercase;   
+}
+
+.streamings li {
+    display:inline-block;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.streamings img {
+    margin: 10px;
+    width: 50px;
+    height: auto; 
+    transition: 0.5s all ease-in-out;
+}
+
+.streamings img:hover {
+    transform: scale(1.2);
+}
+
+.container .equipe{
+    max-width: 600px;
+}
+
+.container-about .poster {
+    max-width: 380px;
+    margin: 20px 20px 100px 100px;
+    border-radius: 10px;
+}
+
+.fundo-video {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.fundo-video .video {
+    height: 100vh;
+}
+
+.fundo-video::after {
+    content: "";
+    background-color: #d5011d;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 100%);
+}
+
+.modal{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(52, 52, 50, 0.749);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.conteudo-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    border-radius: 5px;
+    gap:15px
+}
+
+.fechar-modal{
+    background-color: #ffffff;
+    color: #f03a17;
+    font-weight: bold;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.modal iframe{
+    border-width: 0;
+    width: 640px;
+    height: 360px;
+}
+
+.modal.aberto{
+    opacity: 1;
+    visibility: visible;
+}

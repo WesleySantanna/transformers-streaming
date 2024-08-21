@@ -1,0 +1,55 @@
+
+.container-about {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 132px);
+    padding: 0 30px 30px;
+    justify-content: flex-end;
+    text-align: center;
+    flex-direction: row-reverse;
+}
+
+.container-about .imagem-titulo {
+    max-width: 500px;
+}
+
+.container-about .descricao {
+    color: #a8adb7;
+    width: 100%;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.container-about .assista {  
+    color: #f26223;
+    padding: 10px;
+    font-family: 'megatron';
+    font-size: 25px;
+    font-weight: bold;  
+    text-transform: uppercase;   
+}
+
+.streamings li {
+    display:inline-block;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.streamings img {
+    margin: 10px;
+    width: 50px;
+    height: auto; 
+    transition: 0.5s all ease-in-out;
+}
+
+.streamings img:hover {
+    transform: scale(1.2);
+}
+
+.container-about .poster {
+    max-width: 380px;
+    margin: 20px 20px 100px 100px;
+    border-radius: 10px;
+}
